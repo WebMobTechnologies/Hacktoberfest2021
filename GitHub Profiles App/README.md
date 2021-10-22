@@ -1,6 +1,6 @@
 # GitHub Profiles App
 
-    Make a app that search for the user find it and display and the detail profile project etc...
+    Make an app that search for the user and display the details of that specific user's profile project etc...
     
 -   Design: https://uidesigndaily.com/posts/photoshop-profile-card-user-day-286
 -   search for user
