@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
-  background-color: #000;
+  background-color: white;
   color: #fff;
   padding: 24px 0;
   position: relative;
@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
 `
 
 export const ExternalLink = styled.a`
-  color: #fff;
+  color: #6C3483;
   margin-right: 32px;
   font-weight: 600;
 `

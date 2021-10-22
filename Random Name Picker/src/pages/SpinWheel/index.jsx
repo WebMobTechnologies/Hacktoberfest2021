@@ -28,7 +28,7 @@ const SpinWheel = () => {
   return (
     <Wrapper>
       <Container>
-        <H3>Who's the lucky duck?</H3>
+        <H3>Random Name</H3>
         <Title>{list[luckyIndex]}</Title>
       </Container>
 
