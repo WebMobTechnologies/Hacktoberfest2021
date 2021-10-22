@@ -5,16 +5,16 @@ body{
 }
 #countdown-container {
     display: inline-block; 
-    width: 350px; 
+    width: 352px; 
     margin: 200px 0; 
-    border-radius: 5px; 
+    border-radius: 6px; 
     background: #0067bb; 
 }
 
 #countdown {
     font-family: "Fira Sans", sans-serif; 
     display: inline-block; 
-    padding: 50px; 
+    padding: 51px; 
     background: #0067bb;
     color: white; 
 }
