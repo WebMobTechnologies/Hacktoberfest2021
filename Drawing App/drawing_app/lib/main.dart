@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyHomePage());
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: MyHomePage(title: 'Drawing App'),
+    );
+  }
 }
 
-
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
+  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -20,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Drawing App"),
+        title:  Text(widget.title),
       ),
       body: Center(
 
@@ -38,3 +52,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
