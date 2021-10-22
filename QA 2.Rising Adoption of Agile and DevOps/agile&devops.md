@@ -54,15 +54,6 @@ Then, he continues, you need to scan through our existing infrastructure and app
 
 Once we have the Agile teams using DevOps and have established a roadmap on how to shift our existing platforms to flexible digital solutions, Arman says, we can incrementally move forward through the transformation. We should plan to have a moment of pause and looking back at the end of each iteration, to inspect and adapt our effort for the next iteration with the needed re-alignment and corrective action items.
 
-Moreover, Neil states that Agile (and DevOps) are more than adopting a set of ceremonies and doing a re-org. Indeed, many companies have made an investment in agile through training and restructuring and have not seen the benefit, since they have not committed to changing their culture.
+Neil states that Agile (and DevOps) are more than adopting a set of ceremonies and doing a re-org. Indeed, many companies have made an investment in agile through training and restructuring and have not seen the benefit, since they have not committed to changing their culture.
 
-## Implementing Agile and DevOps
-
-‘You only need to implement Agile and DevOps for the businesses you want to keep!’
-
-The rising market turbulence and the threatening aggregate power of new disruptors swarming the market, all equipped with Agile framework and DevOps pipelines have made the combined power of these two frameworks a vital factor in the survival and growth of any organization in today’s world.
-
-Hence, the competitive advantage of Agile and DevOps teams in responding to changing customer needs and market trends, while maintaining high-quality product delivery, is the best reason for any business to go through the necessary changes to establish and incorporate them into their digital transformation.
-
-If an enterprise wants to stay relevant in the market in the face of the rising power of rivals and shifting tides, there is no other available solution as effective as the integrated power of Agile and DevOps in maintaining their position in the market and help them grow with the flow of trends.
 
