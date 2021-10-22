@@ -1,0 +1,12 @@
+body{
+    background:url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    margin: 0;
+}
+#countdown-container {
+    display: inline-block; 
+    width: 350px; 
+    margin: 200px 0; 
+    border-radius: 5px; 
+    background: #0067bb; 
+}
