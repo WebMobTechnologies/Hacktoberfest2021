@@ -10,3 +10,17 @@ body{
     border-radius: 5px; 
     background: #0067bb; 
 }
+
+#countdown {
+    font-family: "Fira Sans", sans-serif; 
+    display: inline-block; 
+    padding: 50px; 
+    background: #0067bb;
+    color: white; 
+}
+
+#countdown span {
+    font-weight: bold; 
+    font-size: 30px; 
+}
+
