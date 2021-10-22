@@ -20,4 +20,4 @@ you can perform various types of automation testing using cypress
 - unit tests
 - component testing
 - API testing
-- visual regression testing
+
