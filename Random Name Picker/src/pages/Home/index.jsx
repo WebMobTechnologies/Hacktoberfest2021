@@ -4,7 +4,7 @@ import {InternalLink, P, LinkContainer, H1} from '../../styles'
 const Home = () => (
   <>
     <H1>
-      Winner winner, chicken dinner!
+      Random Name Picker
     </H1>
     <P>Enter a list and spin the wheel to get a random winner each time. Ready to get started?</P>
 

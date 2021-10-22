@@ -23,9 +23,11 @@ const MessageType = {
     FAILED: 'error',
     INFO: 'info',
 };
+const API_KEY = 'b28d246dd7cfc9221938d6034fff664e';
 
 export default {
     Regex,
     ResponseCode,
     MessageType,
+    API_KEY
 };

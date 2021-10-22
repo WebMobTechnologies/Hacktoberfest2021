@@ -11,5 +11,6 @@ const Routes = {
     /*  Authenticated Routes    */
 
     Home: 'Home',
+    Weather:"Weather"
 };
 export default Routes;
