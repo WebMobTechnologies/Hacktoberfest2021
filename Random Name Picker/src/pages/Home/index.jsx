@@ -1,6 +1,7 @@
 import React from 'react'
 import {InternalLink, P, LinkContainer, H1} from '../../styles'
 
+
 const Home = () => (
   <>
     <H1>

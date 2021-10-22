@@ -13,6 +13,7 @@ export const Title = styled.h2`
   font-weight: 900;
   font-size: 72px;
   word-break: break-word;
+  color : white;
 
   @media (max-width: 720px) {
     font-size: 42px;
@@ -25,6 +26,7 @@ export const ProgressContainer = styled.div`
     border: 2px solid #000;
     height: 32px;
     margin-bottom: 32px;
+    color: white;
   }
 
   progress[value]::-webkit-progress-bar {
@@ -32,7 +34,7 @@ export const ProgressContainer = styled.div`
   }
 
   progress[value]::-webkit-progress-value {
-    background: #000;
+    background: white;
   }
 `
 
