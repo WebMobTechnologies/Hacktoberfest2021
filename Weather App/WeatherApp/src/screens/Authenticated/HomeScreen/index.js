@@ -1,33 +1,46 @@
 import React from 'react';
+import { Text, View } from 'react-native';
+import Weather from '../weatherScreen';
+import { styles } from './styles';
 
-import {View} from 'react-native';
-
-import {styles} from './styles';
-
-import {Label} from 'src/component';
-import {CommonStyle} from 'src/utils';
-
-const Home = (props) => {
-    /*  Life-cycles Methods */
-
-    /*  Public Interface Methods */
-
-    /*  Validation Methods  */
-
-    /*  UI Events Methods   */
-
-    const onPressIcon = () => {
+export default class Home extends React.Component {
+    state = {
+        isLoading: false,
+        temperature: 0,
+        weatherCondition: null,
+        error: null
     };
 
-    /*  Custom-Component sub-render Methods */
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                this.fetchWeather(position.coords.latitude, position.coords.longitude);
+            },
+            error => {
+                this.setState({
+                    error: 'Error Gettig Weather Condtions'
+                });
+            }
+        );
+    }
 
-    return (
-        <View style={CommonStyle.master_full_flex}>
+    fetchWeather(lat = 25, lon = 25) {
+        fetch(
+            `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=b28d246dd7cfc9221938d6034fff664e&units=metric`
+        )
+            .then(res => res.json())
+            .then(json => {
+                console.log(json);
+            });
+    }
+
+    render() {
+        const { isLoading } = this.state;
+        return (
             <View style={styles.container}>
-                <Label onPress={onPressIcon}>{'Home Screen'}</Label>
+                {isLoading ? <Text>Fetching The Weather</Text> : <Weather />}
             </View>
-        </View>
-    );
-};
+        );
+    }
 
-export default Home;
+}
