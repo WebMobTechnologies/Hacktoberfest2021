@@ -21,3 +21,15 @@ you can perform various types of automation testing using cypress
 - component testing
 - API testing
 
+- So let's Create a our first test
+Within Integration we will create a file called test with the spec.js extension — to be identified and executed as a test spec, and we will start to write our first test.
+Mocha offers us the following test organization structure:
+
+```javascript
+describe('Mocha’s interface', () => {
+  context('it provides a way to keep tests easier to read and organized.', () => {
+    it('This is your test case', () => {
+      expect(true).to.eq(true)
+    });
+  });
+});
