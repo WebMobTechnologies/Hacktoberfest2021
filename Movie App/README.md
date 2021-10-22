@@ -1,6 +1,6 @@
 # Movie App
 
-    Make A movie app that List the name of movies
+    Make an movie app that List the name of movies
     Selecting one of them It shows full information about movie,
     actors info,
     display IMDB rating or
