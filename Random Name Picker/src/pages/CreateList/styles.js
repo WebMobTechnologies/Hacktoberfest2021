@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const DangerZone = styled.div`
-  background-color: #D03000;
+  background-color: #000;
   padding: 48px;
   width: 90%;
   color: #fff;

@@ -1,25 +1,25 @@
-import React from 'react'
-import {FooterContainer, ExternalLink} from './styles'
+import React from "react";
+import { FooterContainer, ExternalLink } from "./styles";
 
 const Footer = () => (
   <FooterContainer>
     <ExternalLink
-      href="https://github.com/isabelxklee/winner-winner-chicken-dinner"
+      href="https://webmobtech.com/"
       target="_blank"
       rel="noopener noreferrer"
       className="footer-link"
     >
-      GitHub
+      WebMob Technologies
     </ExternalLink>
     <ExternalLink
-      href="https://www.kleetime.com"
+      href="https://github.com/wmtjayakbari/Hacktoberfest2021/tree/asmeeta/Random%20Name%20Picker"
       target="_blank"
       rel="noopener noreferrer"
       className="footer-link"
     >
-      Made by Isabel K. Lee
+      Made by WebMob
     </ExternalLink>
   </FooterContainer>
-)
+);
 
-export default Footer
+export default Footer;

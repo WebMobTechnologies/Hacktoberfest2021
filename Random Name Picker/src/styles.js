@@ -100,6 +100,18 @@ export const InternalLink = styled(NavLink)`
   }
 `;
 
+export const InternalLinkHome = styled(NavLink)`
+  color: #6c3483;
+  text-decoration: underline;
+  border: none;
+  margin: 0 32px 8px 0;
+  font-weight: 600;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`;
+
 export const SecondaryInternalLink = styled(InternalLink)`
   font-family: "Roboto Mono", monospace;
   padding: 0.6em 1em;
