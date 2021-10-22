@@ -1,42 +1,36 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
-import {View} from 'react-native';
+import { View } from 'react-native';
 
-import {styles} from './styles';
+import { styles } from './styles';
 
-import {IS_IOS} from 'src/utils';
+import { IS_IOS } from 'src/utils';
 import Routes from 'src/router/Routes';
 
-import {CommonActions} from '@react-navigation/native';
-import {connect} from 'react-redux';
+import { CommonActions } from '@react-navigation/native';
+import { connect } from 'react-redux';
 
 const Splash = (props) => {
     //navigate to authenticated route
     const resetToAuth = CommonActions.reset({
         index: 0,
-        routes: [{name: Routes.Authenticated}],
+        routes: [{ name: Routes.Authenticated }],
     });
 
     //navigate to authenticated route
     const resetToNotAuth = CommonActions.reset({
         index: 0,
-        routes: [{name: Routes.UnAuthenticated}],
+        routes: [{ name: Routes.UnAuthenticated }],
     });
 
     /*  Life-cycles Methods */
 
     useEffect(() => {
         let splashDelay = IS_IOS ? 100 : 1000;
+        setTimeout(() => {
+            props.navigation.dispatch(resetToAuth);
+        }, splashDelay);
 
-        if (!props.user) {
-            setTimeout(() => {
-                props.navigation.dispatch(resetToNotAuth);
-            }, splashDelay);
-        } else {
-            setTimeout(() => {
-                props.navigation.dispatch(resetToAuth);
-            }, splashDelay);
-        }
     }, []);
 
     /*  Public Interface Methods */
