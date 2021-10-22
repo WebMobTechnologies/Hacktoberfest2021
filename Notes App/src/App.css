@@ -69,8 +69,8 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
 
 .nav-container {
-  height: 60px;
-  background-color: #3498db;
+  height: 50px;
+  background-color: #f4aff7;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 10px 40px;
   font-family: 'Assistant', sans-serif;
@@ -86,7 +86,7 @@ body {
 }
 
 .nav-logo {
-  color: white;
+  color: black;
   font-size: 2.5em;
   float: left;
   cursor: pointer;
@@ -115,11 +115,12 @@ body {
 
 .nav-button:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.13);
+  color: #e74c3c;
 }
 
 @media only screen and (max-width: 500px) {
   .nav-container {
-    height: 60px;
+    height: 50px;
     background-color: #3498db;
     box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.13);
     padding-left: 10px;
@@ -277,7 +278,7 @@ body {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  color: #2980b9;
+  color: #09b02a;
   border-radius: 100%;
   width: 25px;
   height: 25px;
@@ -290,7 +291,7 @@ body {
 }
 
 .note-card-edit:hover {
-  color: #3498db;
+  color: #db3458;
   transform: rotate(90deg);
 }
 
@@ -361,7 +362,7 @@ body {
 }
 
 .note-title {
-  background-color: #3498db;
+  background-color: #34b7db;
   padding: 10px;
 }
 
@@ -371,7 +372,7 @@ body {
   text-align: center;
   font-family: 'Assistant', sans-serif;
   width: 600px;
-  background-color: #2980b9;
+  background-color: #29b9a8;
   color: white;
   padding-left: 10px;
   padding-right: 10px;
