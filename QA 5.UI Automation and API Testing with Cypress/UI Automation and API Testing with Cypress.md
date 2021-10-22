@@ -33,6 +33,9 @@ describe('Mocha’s interface', () => {
     });
   });
 });
+```
+
+
 
 ###Api testing using cypress
 
@@ -47,3 +50,25 @@ Syntax:
 cy.request(method, url)
 method (String): GET,POST, PUT, DELETE. If no method is defined, Cypress uses the GET method by default.
 url (String): The URL to make the request to.
+
+###sample code for api for get request
+
+```javascript
+
+/// <reference types="cypress" />
+
+describe('Products api', () => {
+    context('GET /produtos', () => {
+        it('should return a list with all products', () => {
+            cy.request({
+                method: 'GET',
+                url: 'https://serverest.dev/produtos'
+            })
+                .should((response) => {
+                    cy.log(JSON.stringify(response.body))
+                });
+        });
+    });
+});
+```
+
