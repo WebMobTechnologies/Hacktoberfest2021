@@ -7,8 +7,11 @@ Hacktoberfest 2021
 
 
 Bhavik Bamania 
-
 https://github.com/bhavikji
 
+Name: Shubham Sachania
+https://github.com/wmt-rn-shubham
 
+Name: Vishwa Desai
+https://github.com/wmt-vishwad
 
