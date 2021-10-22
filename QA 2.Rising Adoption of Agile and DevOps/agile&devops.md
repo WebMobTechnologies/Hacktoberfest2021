@@ -31,3 +31,16 @@ With rapidly changing business dynamics and customer expectations, digital trans
 'We will witness a continued growth in adoption of Agile and DevOps as the platform for systems thinking, to drive strategic investments based on their target business outcomes.’
 
 Indeed, he continues, as more companies adopt Agile,  he expects that large frameworks like the Scaled Agile Framework (SAFe) will continue to change in response. For Neil, these methodologies will move from the software development part of a business to other parts of the business, driving overall business agility.
+
+## The benefits...
+
+At the beginning of their agile transformation, many enterprises will struggle because they are attached to their infrastructure and processes. However, there are many advantages that come with using both Agile and DevOps methodologies within a business.
+
+1.  **Shorter value delivery cycle**s: As a joint benefit of Agile and DevOps, you can establish a faster and more efficient product and service creation and delivery process faster and more efficiently.
+
+2. **A stronger culture of collaboration across business and technology:** Agile – specifically Scaled Agile – breaks down departmental silos and re-groups the teams around the Value Streams. This allows the business and technology teams to collaborate and communicate in a dynamic and continuous environment. DevOps helps with improving business agility by integration across teams in the organization. This way all team members (business and technology), become owners of quality and timeliness of deliverables.
+
+3. **Improved Customer Journeys:**  DevOps can help organizations raise their deployment frequency by 200 times and reduce their recovery times by 24 times, which puts them in a strong competitive position in the market compared to other organizations. The DevOps automated CI/CD pipeline significantly raises predictability, reliability, and stability of the products, which in turn raises the quality of customer experience using them and leads to an upward shift in customer sentiment towards the business conducted by the organization.
+
+4. **Promoting a Culture of Innovation:** Agile and DevOps establish an enterprise-wide, fast-moving, adaptive, and incrementally evolving environment that can serve as a breeding ground of new ideas through the ease of experimenting with innovations in the market through Minimum Viable Proofs and Products and collection of feedback on customer reactions.
+
