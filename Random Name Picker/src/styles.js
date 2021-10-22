@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
 `;
 //GT Flexa Trial
 export const H1 = styled.h1`
-  font-family: "GT Flexa Trial", sans-serif;
+  
   font-weight: 900;
   font-size: 80px;
   line-height: 1;
