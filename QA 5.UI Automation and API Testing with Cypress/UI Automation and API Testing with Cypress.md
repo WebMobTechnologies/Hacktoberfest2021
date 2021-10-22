@@ -33,7 +33,6 @@ describe('Mocha’s interface', () => {
     });
   });
 });
-```
 
 
 
