@@ -7,3 +7,10 @@
 -   CRUD note
 -   markdown
 -   localStorage
+
+#Contributres
+
+- Shubham Sachania
+- Vishwa Desai
+- Praful Karmur
+- Ruchi Patel
