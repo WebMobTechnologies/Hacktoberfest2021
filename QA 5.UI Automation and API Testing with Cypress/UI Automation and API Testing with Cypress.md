@@ -72,3 +72,7 @@ describe('Products api', () => {
 });
 ```
 
+The .should() function is modeled identically to the way Promises work in JavaScript. Whatever is returned from the callback function becomes the new subject and will flow into the next command.
+Passing a function to .should() enables you to make multiple assertions on the yielded subject. For now we will not make any assertions, we will just throw the result on the screen using cy.log().
+
+
