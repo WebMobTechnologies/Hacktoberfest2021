@@ -2,6 +2,7 @@
 ### Cypress Testing :
 Cypress is a purely a javascript based frontend testing tool used for morden web.it can be useful for both developers and QAs, but it is more developer friendly tool because for web development mainly javascript is used and cypress is also a javascript based tool 
 using cypress you can:
+
  - set up test
  - write a test 
  - execute test 
