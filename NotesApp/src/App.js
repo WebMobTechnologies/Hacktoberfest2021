@@ -27,13 +27,13 @@ class App extends Component {
         })
     };
 
-    getNotes = () => {
+    getAllNotes = () => {
         axios.get(urlFor('notes'))
             .then((res) => this.setState({notes: res.data}))
             .catch((err) => console.log(err.response.data));
     };
 
-    getNote = (id) => {
+    getNoteById = (id) => {
         axios.get(urlFor(`notes/${id}`))
             .then((res) => this.setState({note: res.data, showNote: true}))
             .catch((err) => console.log(err.response.data));
@@ -60,7 +60,7 @@ class App extends Component {
             });
     };
 
-    deleteNote = (id) => {
+    deleteNoteById = (id) => {
         const newNotesState = this.state.notes.filter((note) => note.id !== id);
         axios.delete(urlFor(`notes/${id}`))
             .then((res) => this.setState({notes: newNotesState}))
@@ -118,10 +118,10 @@ class App extends Component {
                     />
                     :
                     <List
-                        getNotes={this.getNotes}
+                        getNotes={this.getAllNotes}
                         notes={notes}
-                        getNote={this.getNote}
-                        deleteNote={this.deleteNote}
+                        getNote={this.getNoteById}
+                        deleteNote={this.deleteNoteById}
                     />}
             </div>
         );
