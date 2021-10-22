@@ -68,7 +68,7 @@ class Note extends Component {
   render() {
     const { note, closeTagForm } = this.props;
     return(
-      <div className="note-container">
+      <div className="note-container" >
         <h2>Edit This Note</h2>
         <form
           className="note-form"

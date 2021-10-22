@@ -22,7 +22,7 @@ class List extends Component {
     });
 
     return (
-      <div className="list-container">
+      <div className="list-container" style={{backgroundImage:" linear-gradient(to right, red , yellow,green)",minHeight:"100vh"}}>
         {cards}
       </div>
     );
