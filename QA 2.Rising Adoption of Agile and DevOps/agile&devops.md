@@ -19,3 +19,15 @@ Agile and Technology Transition Leader and CTO of Prima Recon, starts by definin
 - Gives higher value to customer collaboration throughout the entire incremental product (and service) creation and improvement (via short feedback cycles), way above and higher than trying to lock-in customers in ironclad contracts.
 
 - Puts the high focus on the team’s ability to quickly respond to changes (in customer needs or preferences and market trends), instead of forcing them to follow a pre-cast plan (thus taking away their flexibility to adapt and re-align quickly).
+
+## The future of agile and DevOps
+
+It is expected that the DevOps market adoption will rise beyond $12.85 billion by 2025.
+
+With rapidly changing business dynamics and customer expectations, digital transformation is the only way to stay profitable and grow for any organization, he says.
+
+'Agile and DevOps are playing at the core of this process.’
+
+'We will witness a continued growth in adoption of Agile and DevOps as the platform for systems thinking, to drive strategic investments based on their target business outcomes.’
+
+Indeed, he continues, as more companies adopt Agile,  he expects that large frameworks like the Scaled Agile Framework (SAFe) will continue to change in response. For Neil, these methodologies will move from the software development part of a business to other parts of the business, driving overall business agility.
