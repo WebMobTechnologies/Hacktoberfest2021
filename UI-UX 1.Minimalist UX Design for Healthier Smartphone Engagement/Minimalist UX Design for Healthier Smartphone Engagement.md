@@ -1,3 +1,5 @@
+[![UX Design](https://storage.googleapis.com/grow-with-goog-publish-prod-media/images/uxdesign.scale-100.png "UX Design")](https://storage.googleapis.com/grow-with-goog-publish-prod-media/images/uxdesign.scale-100.png "UX Design")
+
 ###Minimalist UX Design for Healthier Smartphone Engagement
 
 - Today most of the people are using the Mobile phones doesn't matter what it is andriod | iOS? but yes people love to use minimal and interactive mobile application. 
@@ -34,5 +36,18 @@
 - video
   - When you shows a video or GIf to the user people loves to see once. If they're not interested to use the product or whatever? 
   - Once they open open the video and check the product and if the love they use. So Actually it works. Many of the comapnies belive that video is the best way to express your thoughts into visuals. 
+
+### **Engaging Functionality**
+- Micro Interactions
+  - Let's understand what is Micro Interaction?
+   - Each activity needs a visual response for the client to comprehend that what he expected really happened. A visual assertion.
+   
+  - CTAs (Calls to Action)
+   - Call to Action button or strip that is the most important to engage the users because it is the only way to for user to interact with the system. For that people user interactive words like build your store | 30-Days Free Trial | Enter to win like these. Does it sounds interesting for you?
+  - Personalization
+   - For you to offer genuinely added benefit, you need to move forward, pose the right inquiries, and change the substance to your interest group's inclinations. Personalization is not the slightest bit a passing pattern.
+   
+- This was a ways to how you can engage the customer and allow user to communicate with the system. 
+
 
 
