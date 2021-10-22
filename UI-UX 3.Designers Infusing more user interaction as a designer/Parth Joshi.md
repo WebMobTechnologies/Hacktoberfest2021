@@ -36,8 +36,8 @@ As a designer, your role is to solve your users' problems and for  that you need
 
 **1.** Go and watch your users. (Same as Activity 1)
 
-**2.**Watch a user complete an entire process.As a designer, you should have an idea of the tasks, the sequence the user should follow. Your observations should be connected to evaluating success or failure or any of the processes.
+**2.** Watch a user complete an entire process.As a designer, you should have an idea of the tasks, the sequence the user should follow. Your observations should be connected to evaluating success or failure or any of the processes.
 
-**3.**Document and time each process step  through timestamps, notes, photos, videos, and/or audio recordings.
+**3.** Document and time each process step  through timestamps, notes, photos, videos, and/or audio recordings.
 
 **4.** Conclude your observations into 2 or 3 key insights.
