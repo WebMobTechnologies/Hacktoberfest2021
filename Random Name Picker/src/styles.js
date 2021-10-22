@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
 `;
 //GT Flexa Trial
 export const H1 = styled.h1`
-  
+  font-family: "GT Flexa Trial", sans-serif;
   font-weight: 900;
   font-size: 80px;
   line-height: 1;
@@ -89,7 +89,7 @@ export const Button = styled.button`
 `;
 
 export const InternalLink = styled(NavLink)`
-  color: #6c3483;
+  color: white;
   text-decoration: underline;
   border: none;
   margin: 0 32px 8px 0;
