@@ -33,3 +33,45 @@ describe('Mocha’s interface', () => {
     });
   });
 });
+
+
+
+###Api testing using cypress
+
+We will use the Serverest API project as the target of our tests. This API is an awesome project idealized by Paulo Gonçalves, and mantained by the brazilian opensource community, which allows us to test the most used HTTP methods.
+
+You can check the documentation in https://serverest.dev/.
+
+Now let’s create a new file called GETProdutos.spec.js and make the first call to the target API, using the GET verb in the /produtos route, in order to get a list of products.
+To make an HTTP request we must use the cy.request() function, passing the method and url parameters:
+
+Syntax:
+cy.request(method, url)
+method (String): GET,POST, PUT, DELETE. If no method is defined, Cypress uses the GET method by default.
+url (String): The URL to make the request to.
+
+###sample code for api for get request
+
+```javascript
+
+/// <reference types="cypress" />
+
+describe('Products api', () => {
+    context('GET /produtos', () => {
+        it('should return a list with all products', () => {
+            cy.request({
+                method: 'GET',
+                url: 'https://serverest.dev/produtos'
+            })
+                .should((response) => {
+                    cy.log(JSON.stringify(response.body))
+                });
+        });
+    });
+});
+```
+
+The .should() function is modeled identically to the way Promises work in JavaScript. Whatever is returned from the callback function becomes the new subject and will flow into the next command.
+Passing a function to .should() enables you to make multiple assertions on the yielded subject. For now we will not make any assertions, we will just throw the result on the screen using cy.log().
+
+
