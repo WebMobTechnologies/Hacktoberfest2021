@@ -63,40 +63,68 @@ Output:-
 
 ###Api testing using cypress
 
-We will use the Serverest API project as the target of our tests. This API is an awesome project idealized by Paulo Gonçalves, and mantained by the brazilian opensource community, which allows us to test the most used HTTP methods.
+cypress is just not ui automation test runner, if you see the what cypress do on web diagram then you notticed http request and http response termes, so what it's exactly means is we can also automate the Api testing using cypress.
 
-You can check the documentation in https://serverest.dev/.
-
-Now let’s create a new file called GETProdutos.spec.js and make the first call to the target API, using the GET verb in the /produtos route, in order to get a list of products.
-To make an HTTP request we must use the cy.request() function, passing the method and url parameters:
-
-Syntax:
-cy.request(method, url)
-method (String): GET,POST, PUT, DELETE. If no method is defined, Cypress uses the GET method by default.
-url (String): The URL to make the request to.
-
-###sample code for api for get request
+we can perform all request such as get,put,post,delete,patch using  cypress, for more information you can check the below code block
 
 ```javascript
+// api-spec.js
+describe('via API', () => {
+  beforeEach(resetDatabase)
 
-/// <reference types="cypress" />
+  // used to create predictable ids
+  let counter = 1
+  beforeEach(() => {
+    counter = 1
+  })
 
-describe('Products api', () => {
-    context('GET /produtos', () => {
-        it('should return a list with all products', () => {
-            cy.request({
-                method: 'GET',
-                url: 'https://serverest.dev/produtos'
-            })
-                .should((response) => {
-                    cy.log(JSON.stringify(response.body))
-                });
-        });
-    });
-});
+  const addTodo = title =>
+    cy.request('POST', '/todos', {
+      title,
+      completed: false,
+      id: String(counter++)
+    })
+
+  const fetchTodos = () => cy.request('/todos').its('body')
+
+  const deleteTodo = (id) => cy.request('DELETE', `/todos/${id}`)
+
+  it('adds todo', () => {
+    addTodo('first todo')
+    addTodo('second todo')
+    fetchTodos().should('have.length', 2)
+  })
+
+  it('adds todo deep', () => {
+    addTodo('first todo')
+    addTodo('second todo')
+    fetchTodos().should('deep.equal', [
+      {
+        title: 'first todo',
+        completed: false,
+        id: '1'
+      },
+      {
+        title: 'second todo',
+        completed: false,
+        id: '2'
+      }
+    ])
+  })
+
+  it('adds and deletes a todo', () => {
+    addTodo('first todo')  // id "1"
+    addTodo('second todo') // id "2"
+    deleteTodo('2')
+    fetchTodos().should('deep.equal', [
+      {
+        title: 'first todo',
+        completed: false,
+        id: '1'
+      }
+    ])
+  })
+})
 ```
 
-The .should() function is modeled identically to the way Promises work in JavaScript. Whatever is returned from the callback function becomes the new subject and will flow into the next command.
-Passing a function to .should() enables you to make multiple assertions on the yielded subject. For now we will not make any assertions, we will just throw the result on the screen using cy.log().
-
-
+I hop you like the above information and find it use full, Thank you for reading!
