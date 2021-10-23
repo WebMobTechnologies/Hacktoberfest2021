@@ -2,16 +2,16 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     weatherContainer: {
-        flex: 1,
-        backgroundColor: '#f7b733'
+        flex: 1
     },
     headerContainer: {
         flex: 1,
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-around'
     },
     tempText: {
-        fontSize: 48,
+        fontSize: 72,
         color: '#fff'
     },
     bodyContainer: {
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
         marginBottom: 40
     },
     title: {
-        fontSize: 48,
+        fontSize: 60,
         color: '#fff'
     },
     subtitle: {
