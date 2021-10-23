@@ -29,31 +29,36 @@ And this makes you to write faster, easier and more reliable test case.
 ![image](https://user-images.githubusercontent.com/59276457/138543915-a3c37766-fab1-45f2-a520-73922308b564.png)
 
 
+###Simple Testcase in cypress
+so here i wroted a simple code bloack for demo.
+```javascript
+describe('My First Test', () => {
+  it('Does not do much!', () => {
+    expect(true).to.equal(true)
+  })
+})
+```
+
+so above code block is simple Assertion passing test cases, same way we can also write a Assertion failling testcase
+
+output:-
+
+![image](https://user-images.githubusercontent.com/59276457/138545215-b546a655-a002-45a4-a06f-64adaa5fb5f2.png)
 
 
-
-
-
-
-
-
-
-
-
-
-- So let's Create a our first test
-Within Integration we will create a file called test with the spec.js extension — to be identified and executed as a test spec, and we will start to write our first test.
-Mocha offers us the following test organization structure:
+to fail the assertion you have to just put a false in to.equal(false) function
+see the below code block for more information
 
 ```javascript
-describe('Mocha’s interface', () => {
-  context('it provides a way to keep tests easier to read and organized.', () => {
-    it('This is your test case', () => {
-      expect(true).to.eq(true)
-    });
-  });
-});
+describe('My First Test', () => {
+  it('Does not do much!', () => {
+    expect(true).to.equal(false)
+  })
+})
 ```
+Output:-
+
+![image](https://user-images.githubusercontent.com/59276457/138545221-1f80cb83-9890-4543-8737-223ef5ead79a.png)
 
 
 ###Api testing using cypress
