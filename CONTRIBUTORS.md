@@ -15,3 +15,10 @@ https://github.com/wmt-rn-shubham
 Name: Vishwa Desai
 https://github.com/wmt-vishwad
 
+Name: Zibras Ismail
+https://github.com/ZibrasIsmail
+City: Batticaloa, Sri Lanka
+About: I am a software engineering undergraduate and expertise in web development.
+Language: JavaScript
+Email: mohamedzibras2015@gmail.com
+
