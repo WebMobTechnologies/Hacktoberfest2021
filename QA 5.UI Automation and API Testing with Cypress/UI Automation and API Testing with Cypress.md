@@ -127,4 +127,25 @@ describe('via API', () => {
 })
 ```
 
+API tests are useful because they can confirm that the server does the right thing for edge cases that are not easy to trigger through the UI. For example, let us confirm that the server does not crash and burn when we are trying to delete a non-existent item.
+
+```javascript
+it('does not delete non-existent item', () => {
+  cy
+    .request({
+      method: 'DELETE',
+      url: 'todos/aaa111bbb',
+      failOnStatusCode: false
+    })
+    .its('status')
+    .should('equal', 404)
+})
+
+```
+
+output:-
+
+![image](https://user-images.githubusercontent.com/59276457/138545866-832ac695-645a-4861-8cdb-a31453f60a0e.png)
+
+
 I hop you like the above information and find it use full, Thank you for reading!
