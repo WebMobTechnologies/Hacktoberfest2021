@@ -30,13 +30,19 @@ class App extends Component {
     getAllNotes = () => {
         axios.get(urlFor('notes'))
             .then((res) => this.setState({notes: res.data}))
-            .catch((err) => console.log(err.response.data));
+            .catch((err) => {
+                if (err && err.response)
+                    console.log(err.response.data)
+            });
     };
 
     getNoteById = (id) => {
         axios.get(urlFor(`notes/${id}`))
             .then((res) => this.setState({note: res.data, showNote: true}))
-            .catch((err) => console.log(err.response.data));
+            .catch((err) => {
+                if (err && err.response)
+                    console.log(err.response.data)
+            });
     };
 
     performSubmissionRequest = (data, id) => {
@@ -51,11 +57,15 @@ class App extends Component {
         this.performSubmissionRequest(data, id)
             .then((res) => this.setState({showNote: false}))
             .catch((err) => {
-                const {errors} = err.response.data;
-                if (errors.content) {
-                    this.setState({error: "Missing Note Content!"});
-                } else if (errors.title) {
-                    this.setState({error: "Missing Note Title!"});
+                if (err && err.response) {
+                    const {errors} = err.response.data;
+                    if (errors.content) {
+                        this.setState({error: "Missing Note Content!"});
+                    } else if (errors.title) {
+                        this.setState({error: "Missing Note Title!"});
+                    }
+                } else {
+                    console.log("Something went wrong")
                 }
             });
     };
