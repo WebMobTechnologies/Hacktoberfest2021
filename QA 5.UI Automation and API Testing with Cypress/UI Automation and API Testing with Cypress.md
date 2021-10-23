@@ -1,25 +1,45 @@
 
 
 # UI Automation and API testing with cypress.
+
 ![image](https://user-images.githubusercontent.com/59276457/138414411-1c077f7a-faec-4797-a1b2-fa5ff49250fd.png)
 
 
 
 
-###UI Automation using cypress.io
+###what is cypress.
 
-####what is cypress
-cypress is basically open source tool based on java script for QA engineers to automate the UI testing. cypress is more devloper friendly tool becuse of its dom manipulation techniques and it's directly operating in browser.
+Cypress is basically morden front end testing tool based on JavaScript Framework which is most oftnely used by devlopers and QA engineers to automated the testing process.
+
+using cypress we can devloped all types of test Cases, such as
+
+- Unit Test Case
+- Integration Test Case
+- End to End Test Case
+
+And why i liked cypress becuse these tool can test anything which runs on the browser.
+
+Cypress is moslty compered with selenium but howevery its fundamentally and architecturally different, Cypress does not have the same restriction as selenium.
+
+And this makes you to write faster, easier and more reliable test case.
 
 
-###But why should we use Cypress?
+###what Cypress do on the web
 
-you can perform various types of automation testing using cypress
+![image](https://user-images.githubusercontent.com/59276457/138543915-a3c37766-fab1-45f2-a520-73922308b564.png)
 
-- e2e tests
-- unit tests
-- component testing
-- API testing
+
+
+
+
+
+
+
+
+
+
+
+
 
 - So let's Create a our first test
 Within Integration we will create a file called test with the spec.js extension — to be identified and executed as a test spec, and we will start to write our first test.
@@ -33,7 +53,7 @@ describe('Mocha’s interface', () => {
     });
   });
 });
-
+```
 
 
 ###Api testing using cypress
