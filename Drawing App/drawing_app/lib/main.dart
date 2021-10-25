@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:typed_data';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'dart:ui' as ui;
-
+import 'package:uuid/uuid.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 void main() {
   runApp(MyApp());
 }
@@ -38,6 +42,46 @@ class _DrawAppState extends State<DrawApp> {
   GlobalKey globalKey = GlobalKey();
   //uuid generator generates unique id
   // Uuid uuid = Uuid();
+
+  @override
+  void initState() {
+
+    super.initState();
+    color = Colors.black;
+  }
+
+  Widget buildColorPicker() => ColorPicker(
+    pickerColor: color!,
+    onColorChanged: (color) => setState(() {
+      this.color = color;
+    }),
+  );
+
+  void pickColor(BuildContext context){
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text("pick your color"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              buildColorPicker(),
+              TextButton(
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                  "Select",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ],
+          ),
+        )
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +113,9 @@ class _DrawAppState extends State<DrawApp> {
                   ),
                   child: GestureDetector(
                     onPanDown: (details) {
-                      setState(() {});
+                      setState(() {
+
+                      });
                     },
                     onPanUpdate: (details) {
                       setState(() {});
@@ -77,10 +123,14 @@ class _DrawAppState extends State<DrawApp> {
                     onPanEnd: (details) {
                       setState(() {});
                     },
-                    child: ClipRRect(
-                      child: CustomPaint(
-                          //painter classs goes here
-                          ),
+                    child: RepaintBoundary(
+                      key: globalKey,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: CustomPaint(
+                          painter:MyCustomPainter(points: points,color: color!) ,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -120,7 +170,7 @@ class _DrawAppState extends State<DrawApp> {
                           )),
                       IconButton(
                           onPressed: () {
-                            // pickColor(context);
+                            pickColor(context);
                           },
                           icon: Icon(
                             Icons.color_lens,
@@ -145,4 +195,41 @@ class _DrawAppState extends State<DrawApp> {
       ),
     );
   }
+}
+class MyCustomPainter extends CustomPainter{
+
+  List points;
+  Color color;
+
+  MyCustomPainter({required this.points,required this.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = new Paint() .. color = Colors.white;
+    Rect rect = new Rect.fromLTRB(0, 0, size.width, size.height);
+    canvas.drawRect(rect, paint);
+
+
+    for(int x =0;x<points.length-1;x++){
+      if(points[x] != null && points[x+1] != null){
+        canvas.drawLine(points[x].point, points[x+1].point, points[x].areaPaint);
+      }else if(points[x] != null && points[x+1] == null){
+        canvas.drawPoints(ui.PointMode.points, [points[x].point], points[x].areaPaint);
+      }
+    }
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+
+}
+
+class DrawingArea{
+  Offset point;
+  Paint areaPaint;
+
+  DrawingArea({required this.point, required this.areaPaint});
 }
