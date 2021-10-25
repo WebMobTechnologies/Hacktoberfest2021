@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'dart:ui' as ui;
 void main() {
   runApp(MyApp());
 }
@@ -52,4 +52,76 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+class DrawApp extends StatefulWidget {
+  const DrawApp({Key? key}) : super(key: key);
+
+  @override
+  _DrawAppState createState() => _DrawAppState();
+}
+
+class _DrawAppState extends State<DrawApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:  Text("WebMob Drawing App"),
+      ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.black,
+            ),
+          ),
+
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.4),// color of the  box shadow
+                            blurRadius: 5.0,
+                            spreadRadius: 1.0
+                        )
+                      ],
+                  ),
+                  child: GestureDetector(
+                    onPanDown: (details){
+                    setState(() {
+
+                    });
+                    },
+                    onPanUpdate: (details){
+                      setState(() {
+
+                      });
+                    },
+                    onPanEnd: (details){
+                      setState(() {
+
+                      });
+                    },
+                    child: ClipRRect(
+                      child: CustomPaint(
+                       //painter classs goes here
+                      ),
+                    ),
+                  ),
+
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 
