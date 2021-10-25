@@ -11,12 +11,12 @@ function App() {
     <Router>
       <div className="col-12">
       <Nav />
-        <div className="container-fluid">
+   {/*     <div className="container-fluid">
          <Search />
          <Home />
          <Home />
          <Home />
-          </div>
+          </div>*/}
       </div>
       <Route path="/MovieDetails">
       <MovieDetails />

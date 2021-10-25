@@ -1,55 +1,55 @@
 
-.card{
-    cursor: pointer;
-    width: min-content;
-    height: 380px;
-        /*   background-image: linear-gradient(to bottom, rgb(29, 28, 28), #233050);*/
- background-color: rgb(41,40,71);;
-  border: none;
-  transition: transform .2s;
-  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
-  margin: 10px;
+.cardH{
+  cursor: pointer;
+  width: min-content;
+  height: 380px;
+      /*   background-image: linear-gradient(to bottom, rgb(29, 28, 28), #233050);*/
+background-color: rgb(41,40,71);;
+border: none;
+transition: transform .2s;
+box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+margin: 10px;
 }
 .img-zoom{
-    transition: transform .2s;
+  transition: transform .2s;
 }
 .img-zoom:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
 .card-img-top{
-    height: 300px;
-    width: 240px;
+  height: 300px;
+  width: 240px;
 }
 .text-purple{
-    color: #6a72a1;
+  color: #6a72a1;
 }
 .card-rat{
-        background-color: #1E1F33;
-        padding: 5px;
+      background-color: #1E1F33;
+      padding: 5px;
 }
 .display-inline{
-  width: 90vw;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  margin-right: 15px;
+width: 90vw;
+display: flex;
+flex-flow: row;
+flex-wrap: wrap;
+margin-right: 15px;
 }
 .title-Toprated:hover{
-    color: #0d6efd !important;
-    cursor: pointer;
+  color: #0d6efd !important;
+  cursor: pointer;
 }
 @media (max-width: 600px) {
-    .small-center{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
+  .small-center{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+  }
 }
-  
+
 .loader{
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -79,21 +79,21 @@ background-size: 46px;
 opacity: 1 !important;
 }
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #1e1f20; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background:#242527; 
-  }
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1e1f20; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#242527; 
+}
