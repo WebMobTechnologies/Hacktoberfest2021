@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
 
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -13,43 +15,134 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Drawing App'),
+      home:DrawApp(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class DrawApp extends StatefulWidget {
+  const DrawApp({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _DrawAppState createState() => _DrawAppState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-
-
+class _DrawAppState extends State<DrawApp> {
+  // offset points
+  List points = [];
+  //color of the pen
+  Color? color;
+  //stroke width
+  double strokeWidth = 2.0;
+  //key
+  GlobalKey globalKey = GlobalKey();
+  //uuid generator generates unique id
+  // Uuid uuid = Uuid();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text(widget.title),
+        title: Text("WebMob Drawing App"),
       ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Canvas Project',
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.black,
             ),
-          ],
-        ),
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.4),
+                          // color of the  box shadow
+                          blurRadius: 5.0,
+                          spreadRadius: 1.0)
+                    ],
+                  ),
+                  child: GestureDetector(
+                    onPanDown: (details) {
+                      setState(() {});
+                    },
+                    onPanUpdate: (details) {
+                      setState(() {});
+                    },
+                    onPanEnd: (details) {
+                      setState(() {});
+                    },
+                    child: ClipRRect(
+                      child: CustomPaint(
+                          //painter classs goes here
+                          ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20.0)),
+                  width: MediaQuery.of(context).size.width * 0.80,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Slider(
+                          min: 1.0,
+                          max: 5.0,
+                          activeColor: color,
+                          value: strokeWidth,
+                          onChanged: (double value) {
+                            this.setState(() {
+                              strokeWidth = value;
+                            });
+                          },
+                        ),
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            setState(() {
+                              points.clear();
+                            });
+                          },
+                          icon: Icon(
+                            Icons.phonelink_erase_rounded,
+                            color: color,
+                          )),
+                      IconButton(
+                          onPressed: () {
+                            // pickColor(context);
+                          },
+                          icon: Icon(
+                            Icons.color_lens,
+                            color: color,
+                          )),
+                      IconButton(
+                          onPressed: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text("Button pressed")));
+                            setState(() {
+                              // _save();
+                            });
+                          },
+                          icon: Icon(Icons.save))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
-   // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
-
