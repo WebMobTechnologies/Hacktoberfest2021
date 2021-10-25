@@ -1,0 +1,41 @@
+#btn {
+    height: 60px;
+  }
+  .search {
+    position: relative;
+  }
+  
+  .search input {
+    height: 60px;
+    text-indent: 30px;
+  }
+  .inpt-search{
+      background-color: transparent;
+      border-color: #89CFF0;
+      border-radius: 50px;
+  }
+  .search .fa-search {
+    position: absolute;
+    top: 23px;
+    left: 16px;
+  }
+  
+  #InfoBanner{
+   
+    width: 100%;
+  }
+  
+  .reversed {
+    display: inline-block;
+    padding: 1.0em;
+    padding-left: 0.3em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1;
+    color: #fff;
+    font-size: 15px;
+    background-color:#ef5350;
+  }
+
+ 
