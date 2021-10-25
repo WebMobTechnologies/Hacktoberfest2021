@@ -6,7 +6,7 @@ Hacktoberfest 2021
 ## Contributors
 
 
-Bhavik Bamania 
+Name: Bhavik Bamania 
 https://github.com/bhavikji
 
 Name: Shubham Sachania
@@ -17,3 +17,6 @@ https://github.com/wmt-vishwad
 
 Name: Trupti Barad
 https://github.com/trrajput
+
+Name: Vikas Jakasaniya
+https://github.com/vikasj-wmt
