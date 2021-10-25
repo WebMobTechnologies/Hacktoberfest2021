@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:typed_data';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'dart:ui' as ui;
-
+import 'package:uuid/uuid.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 void main() {
   runApp(MyApp());
 }
@@ -38,6 +42,14 @@ class _DrawAppState extends State<DrawApp> {
   GlobalKey globalKey = GlobalKey();
   //uuid generator generates unique id
   // Uuid uuid = Uuid();
+
+  @override
+  void initState() {
+
+    super.initState();
+    color = Colors.black;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +60,7 @@ class _DrawAppState extends State<DrawApp> {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.black,
+              //color: Colors.black,
             ),
           ),
           Center(
@@ -69,7 +81,9 @@ class _DrawAppState extends State<DrawApp> {
                   ),
                   child: GestureDetector(
                     onPanDown: (details) {
-                      setState(() {});
+                      setState(() {
+
+                      });
                     },
                     onPanUpdate: (details) {
                       setState(() {});
@@ -79,7 +93,7 @@ class _DrawAppState extends State<DrawApp> {
                     },
                     child: ClipRRect(
                       child: CustomPaint(
-                          //painter classs goes here
+                          painter: MyCustomPainter(points: points,color: color!),
                           ),
                     ),
                   ),
@@ -145,4 +159,41 @@ class _DrawAppState extends State<DrawApp> {
       ),
     );
   }
+}
+class MyCustomPainter extends CustomPainter{
+
+  List points;
+  Color color;
+
+  MyCustomPainter({required this.points,required this.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = new Paint() .. color = Colors.white;
+    Rect rect = new Rect.fromLTRB(0, 0, size.width, size.height);
+    canvas.drawRect(rect, paint);
+
+
+    for(int x =0;x<points.length-1;x++){
+      if(points[x] != null && points[x+1] != null){
+        canvas.drawLine(points[x].point, points[x+1].point, points[x].areaPaint);
+      }else if(points[x] != null && points[x+1] == null){
+        canvas.drawPoints(ui.PointMode.points, [points[x].point], points[x].areaPaint);
+      }
+    }
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+
+}
+
+class DrawingArea{
+  Offset point;
+  Paint areaPaint;
+
+  DrawingArea({required this.point, required this.areaPaint});
 }
