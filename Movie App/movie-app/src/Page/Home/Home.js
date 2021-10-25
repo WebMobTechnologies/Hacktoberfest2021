@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import StarRatings from "react-star-ratings";
 import Slider from "react-slick";
 
 
@@ -78,7 +79,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3 cardH">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
@@ -100,7 +101,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails/438631`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3   ">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
@@ -122,7 +123,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails/438631`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3 cardH">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
@@ -144,7 +145,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails/438631`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3 cardH">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
@@ -166,7 +167,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails/438631`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3 cardH">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
@@ -188,7 +189,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails/438631`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3 cardH">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
@@ -210,7 +211,7 @@ export default function Home() {
 
                     <div className="col-md col-lg col-sm ">
                         <Link to={`/MovieDetails/438631`}>
-                            <div className="card  mt-3">
+                            <div className="card mt-3 cardH">
                                 <img
                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face//d5NXSklXo0qyIYkgV94XAgMIckC.jpg`}
                                     className="card-img-top img-zoom"
