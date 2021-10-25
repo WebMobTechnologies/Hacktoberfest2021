@@ -50,6 +50,38 @@ class _DrawAppState extends State<DrawApp> {
     color = Colors.black;
   }
 
+  Widget buildColorPicker() => ColorPicker(
+    pickerColor: color!,
+    onColorChanged: (color) => setState(() {
+      this.color = color;
+    }),
+  );
+
+  void pickColor(BuildContext context){
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text("pick your color"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              buildColorPicker(),
+              TextButton(
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                  "Select",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ],
+          ),
+        )
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +92,7 @@ class _DrawAppState extends State<DrawApp> {
         children: [
           Container(
             decoration: BoxDecoration(
-              //color: Colors.black,
+              color: Colors.black,
             ),
           ),
           Center(
@@ -91,10 +123,14 @@ class _DrawAppState extends State<DrawApp> {
                     onPanEnd: (details) {
                       setState(() {});
                     },
-                    child: ClipRRect(
-                      child: CustomPaint(
-                          painter: MyCustomPainter(points: points,color: color!),
-                          ),
+                    child: RepaintBoundary(
+                      key: globalKey,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: CustomPaint(
+                          painter:MyCustomPainter(points: points,color: color!) ,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -134,7 +170,7 @@ class _DrawAppState extends State<DrawApp> {
                           )),
                       IconButton(
                           onPressed: () {
-                            // pickColor(context);
+                            pickColor(context);
                           },
                           icon: Icon(
                             Icons.color_lens,
