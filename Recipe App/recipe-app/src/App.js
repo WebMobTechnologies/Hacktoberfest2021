@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.scss';
-import Header from './components/Header';
-import Footer from './components/Footer'
+import "./App.scss";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
-      <Header/>
-      Content
-      <Footer/>
+      <Header />
+      <div className="mainContent"></div>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,18 @@
+.footer {
+  flex: 0 1;
+  width: 100%;
+  background: black;
+  height: 75px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: white;
+    .lucifer {
+      color: white;
+    }
+  }
+}

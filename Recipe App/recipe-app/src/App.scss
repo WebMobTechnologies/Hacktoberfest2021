@@ -2,8 +2,15 @@
 
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.mainContent {
+  flex: 1 !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
