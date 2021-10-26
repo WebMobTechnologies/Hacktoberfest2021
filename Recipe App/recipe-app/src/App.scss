@@ -1,7 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 
 .App {
-  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,6 +9,9 @@
 }
 .mainContent {
   flex: 1 !important;
+  width: 100% !important;
+  align-self: flex-end;
+  padding: 20px;
 }
 .App-logo {
   height: 40vmin;
