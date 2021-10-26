@@ -54,7 +54,7 @@ main{
     border-radius: 3px;
     box-shadow: 0.2px 4px 5px rgb(0, 0, 0,1);
     background-color: var(--secondary-colour);
-    position: relative;
+    position:relative;
     overflow: hidden;
 }
 
@@ -63,16 +63,16 @@ main{
 }
 
 .movie-info{
-    color:#fff;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 00.5rem 1rem 1rem;
-    letter-spacing: 00.5rem;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
 }
 
 .movie-info h3{
-    margin-top: 0;
+    margin-top: 0%;
 }
 
 .movie-info span{
@@ -81,30 +81,32 @@ main{
     border-radius: 3px;
     font-weight: bold;
 }
+
 .movie-info span.green{
     color: lightgreen;
+}
 
-}
+
 .movie-info span.orange{
-    color:orange;
-    
+    color: orange;
 }
+
+
 .movie-info span.red{
     color: red;
-    
-}
-.overview{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    padding: 1rem;
-    max-height: 100%;
-    transform: translate(101%);
-    transition:tranform 0.3s ease-in ;
 }
 
+.overview{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color:#fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition:transform 0.3s ease-in;
+}
 .movie:hover .overview{
-    transform: translateY();
+    transform: translateY(0);
 }
