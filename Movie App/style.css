@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@200;400;700&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -8,9 +10,9 @@
 }
 
 body{
+    background-color: var(--primary-colour);
     font-family: 'poppins',sans-serif;
     margin: 0;
-    background-color: var(--primary-colour);
 }
 
 header{
@@ -30,6 +32,7 @@ header{
     color: #fff;
     font-family: inherit;
 }
+
 .Search:focus{
     outline: 0;
     background-color: var(--primary-colour);
@@ -38,7 +41,8 @@ header{
 .Search::placeholder{
     color: #7378c5;
 }
-.main{
+
+main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
