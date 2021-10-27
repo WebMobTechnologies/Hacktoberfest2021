@@ -1,12 +1,10 @@
-Hacktoberfest 2021
--------------------------
+## Hacktoberfest 2021
 
 # Hacktoberfest 2021-Online Meetup at WebMob Technologies.
 
 ## Contributors
 
-
-Name: Bhavik Bamania 
+Name: Bhavik Bamania
 https://github.com/bhavikji
 
 Name: Shubham Sachania
@@ -20,3 +18,6 @@ https://github.com/trrajput
 
 Name: Vikas Jakasaniya
 https://github.com/vikasj-wmt
+
+Name: Nikhil Verma
+https://github.com/Lucifer-N
