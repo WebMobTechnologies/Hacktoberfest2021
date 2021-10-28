@@ -1,11 +1,19 @@
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .logo {
-    height: 35px;
-    display: flex;
+  margin: auto;
+  height: 35px;
+  display: flex;
 }
 .brandname {
-    display: block;
-    svg {
-        width: 127px;
-        height: 32px;
-    }
+  display: block;
+  svg {
+    width: 127px;
+    height: 32px;
+  }
 }

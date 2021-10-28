@@ -1,13 +1,15 @@
-import logo from './logo.svg';
-import './App.scss';
-import Header from './components/Header';
-import Footer from './components/Footer'
+import "./App.scss";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Recipes from "./components/Recipes";
 function App() {
   return (
     <div className="App">
-      <Header/>
-      Content
-      <Footer/>
+      <Header />
+      <div className="mainContent">
+        <Recipes />
+      </div>
+      <Footer />
     </div>
   );
 }
