@@ -21,6 +21,9 @@ https://github.com/trrajput
 Name: Vikas Jakasaniya
 https://github.com/vikasj-wmt
 
+Mudra Koradia
+https://github.com/wmt-php-mudramk
+
 Name: Sapan Zaveri
 https://github.com/wmtrnsapanzaveri
 
