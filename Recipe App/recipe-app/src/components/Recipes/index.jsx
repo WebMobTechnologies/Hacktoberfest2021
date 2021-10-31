@@ -52,13 +52,21 @@ const Recipies = () => {
         </Modal.Header>
         <Modal.Body>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Label>Recipe name</Form.Label>
+            <Form.Control type="text" placeholder="Chicken Masala" />
+            <Form.Label>Description</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="It is easy to make you should know it"
+            />
+            <Form.Label>Upload Image</Form.Label>
+            <Form.Control type="file" />
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
-            Add
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
