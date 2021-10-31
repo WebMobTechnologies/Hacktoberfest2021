@@ -3,6 +3,23 @@ import Image from "./images/34da4c4e-82c3-47d7-953d-121945eada1e00-giveitup-unhe
 import { Card, Button, Modal, Form } from "react-bootstrap";
 import { useState } from "react";
 const Recipies = () => {
+  const demoRecipies = [
+    {
+      name: "Samosa",
+      description:
+        "A samosa is a South Asian fried or baked pastry with a savory filling like spiced potatoes, onions, peas, chicken and other meats, or lentils.",
+    },
+    {
+      name: "Chicken curry",
+      description:
+        "Chicken curry is a dish originating from the Indian subcontinent. It is common in the Indian subcontinent.",
+    },
+    {
+      name: "Biryani",
+      description:
+        "There is only two type mutton biryani and chicken biryani. there is no such thing as veg biryani. Change my mind",
+    },
+  ];
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -11,13 +28,13 @@ const Recipies = () => {
 
   const handleCloseForm = () => setShowForm(false);
   const handleShowForm = () => setShowForm(true);
-  const renderedCards = [1, 2, 3].map((card) => {
+  const renderedCards = demoRecipies.map((card) => {
     return (
       <Card onClick={handleShow} style={{ width: "18rem" }}>
         <Card.Img variant="top" src={Image} />
         <Card.Body>
-          <Card.Title>Recipe {card}</Card.Title>
-          <Card.Text>{card} recipe short description</Card.Text>
+          <Card.Title>{card.name}</Card.Title>
+          <Card.Text>{card.description}</Card.Text>
           <Button onClick={handleShow} variant="primary">
             Detailed Description
           </Button>
