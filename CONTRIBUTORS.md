@@ -28,6 +28,9 @@ https://github.com/wmtrnsapanzaveri
 Name: Nikhil Verma
 https://github.com/Lucifer-N
 
+Name: Rudrax Variya
+https://github.com/rudraxvariya
+
 Name: Raj Chokshi
 https://github.com/rajChokshiDeveloper710
 
