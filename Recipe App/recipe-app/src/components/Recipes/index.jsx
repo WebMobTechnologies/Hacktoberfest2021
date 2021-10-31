@@ -12,9 +12,11 @@ const Recipies = () => {
       <Card onClick={handleShow} style={{ width: "18rem" }}>
         <Card.Img variant="top" src={Image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>{card} description</Card.Text>
-          <Button variant="primary">Action Button</Button>
+          <Card.Title>Recipe {card}</Card.Title>
+          <Card.Text>{card} recipe short description</Card.Text>
+          <Button onClick={handleShow} variant="primary">
+            Detailed Description
+          </Button>
         </Card.Body>
       </Card>
     );
